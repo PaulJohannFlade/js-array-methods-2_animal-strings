@@ -38,9 +38,7 @@ const firstAnimalStartingWithLetterP = animalStrings.find((animal) => {
 console.log(firstAnimalStartingWithLetterP);
 console.clear();
 
-const indexOfGiraffe = animalStrings.find((animal) => {
-  return animal === "giraffe";
-});
+const indexOfGiraffe = animalStrings.indexOf("giraffe");
 console.log(indexOfGiraffe);
 
 // Note:
@@ -79,8 +77,8 @@ console.log(everyAnimalHasMoreThanTwoLetters);
 // Option 2: Use `map()` to create an array with the length values of all strings,
 // 				then sum them up with `reduce()` (keyword: method chaining)
 const sumOfAllAnimalCharacters = animalStrings.reduce((a, b) => {
-  return a + b.length;
-});
+  return a + b;
+}).length;
 console.log(sumOfAllAnimalCharacters);
 
 export {
